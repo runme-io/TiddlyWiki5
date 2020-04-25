@@ -11,7 +11,7 @@ RUN npm i
 RUN node tiddlywiki.js mynewwiki --init server 
 
 #Expose running port
-EXPOSE 8080
+EXPOSE 80
 
 # How we will run application
-ENTRYPOINT node tiddlywiki.js mynewwiki --listen
+ENTRYPOINT node tiddlywiki.js mynewwiki --listen port=80 host=0.0.0.0
